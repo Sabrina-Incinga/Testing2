@@ -19,7 +19,6 @@ public class BasePage {
     public WebDriver getChromeDriverConnection(){
         System.setProperty("webdriver.crome.driver", ".\\src\\test\\resources\\chromedriver\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         options.addArguments("--ignore-certificate-errors");
         driver = new ChromeDriver(options);
         return driver;
